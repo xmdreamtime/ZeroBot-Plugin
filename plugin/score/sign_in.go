@@ -29,7 +29,7 @@ import (
 )
 
 const (
-	backgroundURL = "https://t.mwm.moe/pc"
+	backgroundURL = "https://t.alcy.cc/mp"
 	referer       = "https://weibo.com/"
 	signinMax     = 1
 	// SCOREMAX 分数上限定为1200
