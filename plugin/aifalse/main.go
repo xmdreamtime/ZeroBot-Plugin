@@ -40,8 +40,8 @@ import (
 )
 
 const (
-	backgroundURL = "https://iw233.cn/api.php?sort=mp"
-	referer       = "https://weibo.com/"
+	backgroundURL = "https://t.mwm.moe/pc"
+	//referer       = "https://weibo.com/"
 )
 
 var (
@@ -49,8 +49,8 @@ var (
 	bgdata     *[]byte
 	bgcount    uintptr
 	isday      bool
-	lightcolor = [3][4]uint8{{255, 70, 0, 255}, {255, 165, 0, 255}, {145, 240, 145, 255}}
-	darkcolor  = [3][4]uint8{{215, 50, 0, 255}, {205, 135, 0, 255}, {115, 200, 115, 255}}
+	lightcolor = [3][4]uint8{{255, 70, 0, 255}, {255, 165, 0, 255}, {102, 204, 255, 255}}
+	darkcolor  = [3][4]uint8{{215, 50, 0, 255}, {205, 135, 0, 255}, {74, 156, 196, 255}}
 )
 
 func init() { // 插件主体
