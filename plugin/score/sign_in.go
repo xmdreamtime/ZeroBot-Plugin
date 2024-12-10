@@ -29,8 +29,8 @@ import (
 )
 
 const (
-	backgroundURL = "https://www.dmoe.cc/random.php"
-	referer       = "https://weibo.com/"
+	backgroundURL = "https://t.mwm.moe/pc"
+	//referer       = "https://weibo.com/"
 	signinMax     = 1
 	// SCOREMAX 分数上限定为1200
 	SCOREMAX = 1200
