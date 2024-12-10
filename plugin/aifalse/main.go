@@ -41,7 +41,7 @@ import (
 
 const (
 	backgroundURL = "https://t.mwm.moe/pc"
-	//referer       = "https://weibo.com/"
+	referer       = "https://weibo.com/"
 )
 
 var (
