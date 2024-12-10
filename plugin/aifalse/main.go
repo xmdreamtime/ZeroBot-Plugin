@@ -40,7 +40,7 @@ import (
 )
 
 const (
-	backgroundURL = "https://t.mwm.moe/pc"
+	backgroundURL = "https://t.alcy.cc/mp"
 	referer       = "https://weibo.com/"
 )
 
