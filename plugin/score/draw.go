@@ -36,7 +36,7 @@ func drawScore16(a *scdata) (image.Image, error) {
 		return nil, err
 	}
 	// 避免图片过大，最大 1280*720
-	back = imgfactory.Limit(back, 1280, 720)
+	back = imgfactory.Limit(back, 2560, 1440)
 	imgDX := back.Bounds().Dx()
 	imgDY := back.Bounds().Dy()
 	canvas := gg.NewContext(imgDX, imgDY)
@@ -138,7 +138,7 @@ func drawScore15(a *scdata) (image.Image, error) {
 		return nil, err
 	}
 	// 避免图片过大，最大 1280*720
-	back = imgfactory.Limit(back, 1280, 720)
+	back = imgfactory.Limit(back, 2560, 1440)
 	canvas := gg.NewContext(back.Bounds().Size().X, int(float64(back.Bounds().Size().Y)*1.7))
 	canvas.SetRGB(1, 1, 1)
 	canvas.Clear()
@@ -192,7 +192,7 @@ func drawScore17(a *scdata) (image.Image, error) {
 		return nil, err
 	}
 	// 避免图片过大，最大 1280*720
-	back = imgfactory.Limit(back, 1280, 720)
+	back = imgfactory.Limit(back, 2560, 1440)
 	imgDX := back.Bounds().Dx()
 	imgDY := back.Bounds().Dy()
 	canvas := gg.NewContext(imgDX, imgDY)

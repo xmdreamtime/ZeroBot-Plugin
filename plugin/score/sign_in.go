@@ -23,14 +23,13 @@ import (
 	"github.com/FloatTech/zbputils/ctxext"
 	"github.com/FloatTech/zbputils/img/text"
 	"github.com/golang/freetype"
-	log "github.com/sirupsen/logrus"
 	"github.com/wcharczuk/go-chart/v2"
 	zero "github.com/wdvxdr1123/ZeroBot"
 	"github.com/wdvxdr1123/ZeroBot/message"
 )
 
 const (
-	backgroundURL = "https://pic.re/image"
+	backgroundURL = "https://t.mwm.moe/pc"
 	referer       = "https://weibo.com/"
 	signinMax     = 1
 	// SCOREMAX 分数上限定为1200
@@ -333,15 +332,15 @@ func initPic(picFile string, uid int64) (avatar []byte, err error) {
 		return
 	}
 	url, err := bilibili.GetRealURL(backgroundURL)
-	if err == nil {
-		data, err := web.RequestDataWith(web.NewDefaultClient(), url, "", referer, "", nil)
-		if err == nil {
-			return avatar, os.WriteFile(picFile, data, 0644)
-		}
+	if err != nil {
+		// 使用本地已有的图片
+		return avatar, copyImage(picFile)
 	}
-	// 获取网络图片失败，使用本地已有的图片
-	log.Error("[score:get online img error]:", err)
-	return avatar, copyImage(picFile)
+	data, err := web.RequestDataWith(web.NewDefaultClient(), url, "", referer, "", nil)
+	if err != nil {
+		return
+	}
+	return avatar, os.WriteFile(picFile, data, 0644)
 }
 
 // 使用"file:"发送图片失败后，改用base64发送
